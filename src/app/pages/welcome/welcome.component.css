@@ -1,0 +1,9 @@
+.iamtable{
+    height: 300px;
+    width: 100%;
+    background-color: darkorange;
+
+    /* width: 500px; */
+    /* width: 2000px; */
+    width:99%;
+}
