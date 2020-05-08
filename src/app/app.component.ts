@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isCollapsed = false;
-
-  changeLeftNavi(){
-    this.isCollapsed = !this.isCollapsed;
-  }
 }
