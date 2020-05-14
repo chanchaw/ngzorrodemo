@@ -1,0 +1,23 @@
+<nz-table #basicTable [nzData]="tableData" nzBordered="true">
+    <thead>
+      <tr>
+        <th nzWidth="100px" style="overflow: hidden;">Name</th>
+        <th nzWidth="100px">Age</th>
+        <th nzWidth="200px">Address</th>
+        <th>Remark</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rowData of basicTable.data">
+        <td>
+            <nz-select nzShowSearch nzPlaceHolder="" style="width:100%" [nzDropdownMatchSelectWidth]="false" 
+                [(ngModel)]="realName">
+                <nz-option *ngFor="let item of names" [nzLabel]="item" [nzValue]="item"></nz-option>
+            </nz-select>
+        </td>
+        <td>{{ rowData.age }}</td>
+        <td>{{ rowData.address }}</td>
+        <td>{{ rowData.remark }}</td>
+      </tr>
+    </tbody>
+  </nz-table>
