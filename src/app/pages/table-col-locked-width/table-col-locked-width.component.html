@@ -10,7 +10,7 @@
     <tbody>
       <tr *ngFor="let rowData of basicTable.data">
         <td>
-            <nz-select nzShowSearch nzPlaceHolder="" style="width:100%" [nzDropdownMatchSelectWidth]="false" 
+            <nz-select nzShowSearch nzPlaceHolder="" style="width:100px;overflow: hidden;" [nzDropdownMatchSelectWidth]="false" 
                 [(ngModel)]="realName">
                 <nz-option *ngFor="let item of names" [nzLabel]="item" [nzValue]="item"></nz-option>
             </nz-select>
