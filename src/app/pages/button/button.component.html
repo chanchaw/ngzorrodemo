@@ -1,7 +1,7 @@
 <p>官方案例，使用了按钮组件的 disabled 属性，不会触发点击事件</p>
-<button nz-button (click)="onClick01($event)" disabled>不会触发点击事件</button>
+<button nz-button (click)="onClick01()" disabled>不会触发点击事件</button>
 <p>使用了自定义方法禁用，但是会触发点击事件</p>
 <div>
     <button nz-button (click)="this.btnDisabled = !this.btnDisabled">切换可用状态</button>
 </div>
-<button nz-button (click)="onClick02($event)" [ngClass]="{'disabled': !btnDisabled}">不会触发点击事件</button>
+<button nz-button (click)="onClick02()" [ngClass]="{'disabled': !btnDisabled}">不会触发点击事件</button>
