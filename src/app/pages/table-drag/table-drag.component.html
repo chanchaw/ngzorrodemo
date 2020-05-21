@@ -1,0 +1,28 @@
+<nz-table [nzData]="tableData" nzSize="small" [nzFrontPagination]="false" [nzShowPagination]="false">
+    <thead>
+        <tr>
+            <th nzWidth="120px">字段名</th>
+            <th nzWidth="150px">标题</th>
+            <th nzWidth="75px">列宽</th>
+            <th nzWidth="120px">列头对齐</th>
+            <th nzWidth="120px">内容对齐</th>
+            <th nzWidth="60px">可见</th>
+        </tr>
+    </thead>
+    <tbody cdkDropList (cdkDropListDropped)="drop($event)">
+        <tr *ngFor="let rowData of tableData;let rowIndex = index" cdkDrag>
+            <td>{{ rowData.field_name }}</td>    <!-- 字段名称 -->
+            <td>{{ rowData.text }}</td>          <!-- 标题 -->
+            <td>{{ rowData.width_percent }}</td> <!-- 列宽 -->
+            <td>{{ rowData.align_header }}</td>  <!-- 列头对齐 -->
+            <td>{{ rowData.align_cell }}</td>    <!-- 内容对齐 -->
+            <td>
+                <span *ngIf="rowData.visible ===true;else tmpTableStyleDetailVisible">√</span>
+                <ng-template #tmpTableStyleDetailVisible>
+                    <span>×</span>
+                </ng-template>
+            </td>
+        </tr>
+
+    </tbody>
+</nz-table>
