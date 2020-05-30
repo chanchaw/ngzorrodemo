@@ -1,0 +1,5 @@
+<input nz-input [(ngModel)]="oValue" id="oValue" name="oValue" 
+    (ngModelChange)="searchText$.next($event)"
+    placeholder="输入时间隔要超过1秒">
+    
+<input nz-input [(ngModel)]="tValue" id="tValue" name="tValue" placeholder="debounceTime之后的结果">
