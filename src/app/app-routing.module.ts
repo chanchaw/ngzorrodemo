@@ -8,7 +8,8 @@ const routes: Routes = [
   { path: 'tableLockColWidth', loadChildren: () => import('./pages/table-col-locked-width/table-col-locked-width.module').then(m => m.TableColLockedWidthModule) },
   { path: 'button', loadChildren: () => import('./pages/button/button.module').then(m => m.ButtonModule) },
   { path: 'tableDrag', loadChildren: () => import('./pages/table-drag/table-drag.module').then(m => m.TableDragModule) },
-  { path: 'debounceTime', loadChildren: () => import('./pages/debouncetime/debouncetime.module').then(m => m.DebouncetimeModule) }
+  { path: 'debounceTime', loadChildren: () => import('./pages/debouncetime/debouncetime.module').then(m => m.DebouncetimeModule) },
+  { path: 'arrayCopy', loadChildren: () => import('./pages/array-copy/array-copy.module').then(m => m.ArrayCopyModule) }
 ];
 
 @NgModule({
